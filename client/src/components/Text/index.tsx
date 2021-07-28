@@ -1,20 +1,28 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import {
+  compose,
+  typography,
+  TypographyProps,
+  color,
+  ColorProps,
+} from 'styled-system'
 
-import Color from 'theme/color';
+import { textStyleMap } from '../Box';
 
-type Props = {
-  color: string;
+interface TextProps extends TypographyProps, ColorProps {
   children: React.ReactNode;
+  textStyle?: keyof typeof textStyleMap;
+  textDecoration?: 'underline' | 'line-through' | 'overline' | 'underline overline';
 }
 
-const StyledText = styled.div<{color: string}>`
-  color: ${({ color }) => color};
+const Text = styled.div`
+text-decoration: ${({ textDecoration }: TextProps) => textDecoration};
+font-size: ${({ textStyle = 'p3'}: TextProps) => textStyleMap[textStyle]};
+font-weight: ${({ textStyle = 'p3'}: TextProps) => textStyle[0] === 'h' ?
+'600' : undefined};
+${compose(typography, color)};
 `;
-
-const Text = ({ color = Color.dark.default, children }: Props) => (
-  <StyledText color={color} children={children}/>
-)
 
 export default Text;
 

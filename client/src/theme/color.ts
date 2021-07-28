@@ -1,5 +1,3 @@
-
-
 type Shade = {
   dark?: string;
   default: string;

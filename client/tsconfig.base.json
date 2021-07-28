@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "outDir": "./build/ts",
+    "allowJs": true,
+    "checkJs": false,
+    "jsx": "react",
+    "target": "ESNext",
+    "lib": ["ES2019", "DOM", "ScriptHost"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "esnext",
+    "baseUrl": "./",
+    "noImplicitAny": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "paths": {
+      "src/*": [
+        "./src/*"
+      ],
+    }
+  },
+  "exclude": ["node_modules"]
+}
