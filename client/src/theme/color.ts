@@ -1,19 +1,3 @@
-type Shade = {
-  dark?: string;
-  default: string;
-  medium?: string;
-  light?: string;
-};
-
-// type Color =
-//   'dark'
-//   | 'light'
-
-// type ColorType = {
-//   dark: Shade,
-//   light: Shade,
-// };
-
 const color = {
   dark: {
     default: '#000',

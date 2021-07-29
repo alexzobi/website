@@ -34,12 +34,11 @@ const socialMediaIcons = [
 const Home = (): JSX.Element => (
   <Box
     bg={Color.dark.default}
-    height={window.innerHeight}
-    width="100%"
     alignItems="center"
     justifyContent="center"
-    display="flex"
     flexDirection="column"
+    display="flex"
+    flex={1}
   >
     <Text
       textAlign="center"
@@ -49,13 +48,14 @@ const Home = (): JSX.Element => (
     >
       Alex Sobiloff
     </Text>
-    <Text textStyle="p2" color={Color.light.default}>
+    <Text  textAlign="center" textStyle="p2" color={Color.light.default}>
       software engineer. photographer. writer.
     </Text>
     <Box my={24} display="flex" justifyContent="space-between">
       {
         socialMediaIcons.map(({ icon, link }, idx) => (
           <Box
+            key={link}
             ml={idx ? 12 : 0}
             onClick={() => window.open(link)}
           >
