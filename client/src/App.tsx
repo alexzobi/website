@@ -4,6 +4,7 @@ import Home from './scenes/Home';
 import About from './scenes/About';
 import Color from 'theme/color';
 import NavBar from 'components/NavBar';
+import Footer from 'components/Footer';
 import {
   BrowserRouter as Router,
   Switch,
@@ -25,6 +26,7 @@ export default function App(): JSX.Element {
     <Router>
       <Box
         display="flex"
+        justifyContent="space-between"
         flexDirection="column"
         backgroundColor={Color.dark.default}
         minHeight={height}
@@ -39,6 +41,7 @@ export default function App(): JSX.Element {
             <Home />
           </Route>
         </Switch>
+      <Footer />
       </Box>
     </Router>
   );
