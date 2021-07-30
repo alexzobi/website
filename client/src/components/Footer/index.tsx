@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from '@emotion/styled';
 import Box from 'components/Box';
 import github from 'assets/svg/github.svg';
 import facebook from 'assets/svg/facebook.svg';
@@ -29,6 +30,12 @@ const socialMediaIcons = [
   }
 ]
 
+const IconWrapper = styled(Box)`
+  & :active {
+    opacity: 0.5;
+  }
+`;
+
 const Footer = (): JSX.Element => (
   <Box
     my={24}
@@ -39,13 +46,13 @@ const Footer = (): JSX.Element => (
   >
   {
     socialMediaIcons.map(({ icon, link }, idx) => (
-      <Box
+      <IconWrapper
         key={link}
         ml={idx ? 12 : 0}
         onClick={() => window.open(link)}
       >
         <img src={icon} height="32" width="32"/>
-      </Box>
+      </IconWrapper>
     ))
   }
   </Box>

@@ -19,7 +19,7 @@ const Home = (): JSX.Element => (
     >
       Alex Sobiloff
     </Text>
-    <Text  textAlign="center" textStyle="p2">
+    <Text textAlign="center" textStyle="p2">
       software engineer. photographer. writer.
     </Text>
   </Box>

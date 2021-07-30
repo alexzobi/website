@@ -5,8 +5,8 @@ import aboutText from './aboutText';
 
 const About = (): JSX.Element => (
   <Box
-  width={[ 1, 1/1.5, 1/3]}
-  alignSelf="center"
+    width={[ 1, 1/1.5, 1/3]}
+    alignSelf="center"
   >
     <Box
       display="flex"
