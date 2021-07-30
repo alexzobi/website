@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Link } from "react-router-dom";
 import Box from 'components/Box';
-import Color from 'theme/color';
 
 const NavLink = styled(Link)`
   color: #fff;
@@ -25,10 +24,6 @@ const NavBar = (): JSX.Element => (
       <Box
         display="flex"
         justifyContent="flex-end"
-        color={Color.light.default}
-        borderBottomColor={Color.light.default}
-        borderBottomWidth="2px"
-        borderBottomStyle="solid"
       >
           <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About</NavLink>

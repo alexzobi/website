@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Box from './components/Box';
 import Home from './scenes/Home';
+import About from './scenes/About';
 import Color from 'theme/color';
 import NavBar from 'components/NavBar';
 import {
@@ -26,16 +27,13 @@ export default function App(): JSX.Element {
         display="flex"
         flexDirection="column"
         backgroundColor={Color.dark.default}
-        height={height}
+        minHeight={height}
         color={Color.light.default}
       >
        <NavBar />
         <Switch>
           <Route path="/about">
             <About />
-          </Route>
-          <Route path="/users">
-            <Users />
           </Route>
           <Route path="/">
             <Home />
@@ -44,12 +42,4 @@ export default function App(): JSX.Element {
       </Box>
     </Router>
   );
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
 }

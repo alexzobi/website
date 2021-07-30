@@ -42,13 +42,12 @@ const Home = (): JSX.Element => (
   >
     <Text
       textAlign="center"
-      color={Color.light.default}
       fontSize="72px"
       textDecoration="underline"
     >
       Alex Sobiloff
     </Text>
-    <Text  textAlign="center" textStyle="p2" color={Color.light.default}>
+    <Text  textAlign="center" textStyle="p2">
       software engineer. photographer. writer.
     </Text>
     <Box my={24} display="flex" justifyContent="space-between">
